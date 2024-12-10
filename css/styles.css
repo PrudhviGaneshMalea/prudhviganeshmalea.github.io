@@ -3727,14 +3727,14 @@ textarea.form-control-lg {
 
 .navbar {
   --bs-navbar-padding-x: 0;
-  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-padding-y: 0rem;
   --bs-navbar-color: rgba(0, 0, 0, 0.55);
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
-  --bs-navbar-brand-font-size: 1.25rem;
+  --bs-navbar-brand-font-size: 1.75rem;
   --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-nav-link-padding-x: 0.5rem;
@@ -3746,12 +3746,17 @@ textarea.form-control-lg {
   --bs-navbar-toggler-border-radius: 0.375rem;
   --bs-navbar-toggler-focus-width: 0.25rem;
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
-  position: relative;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #f8f9fa;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -7581,7 +7586,7 @@ textarea.form-control-lg {
 }
 
 .my-5 {
-  margin-top: 3rem !important;
+  margin-top: 6rem !important;
   margin-bottom: 3rem !important;
 }
 
@@ -11731,4 +11736,51 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+
+}
+
+.heading-title{
+  margin-top:3rem;
+}
+
+.content-box {
+  height: 250px; /* Ensures both boxes are the same height */
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.certifications-list a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.certifications-list a:hover {
+  color: #0056b3;
+}
+
+.image-preview-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-preview-box img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#default-text {
+  font-size: 1.2rem;
+  color: #6c757d;
+  display: block;
+}
+
+img:not(.d-none) + #default-text {
+  display: none;
 }
